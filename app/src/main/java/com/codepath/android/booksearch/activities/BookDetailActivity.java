@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
@@ -31,7 +32,7 @@ public class BookDetailActivity extends AppCompatActivity {
         ivBookCover = (ImageView) findViewById(R.id.ivBookCover);
         tvTitle = (TextView) findViewById(R.id.tvTitle);
         tvAuthor = (TextView) findViewById(R.id.tvAuthor);
-
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         // Extract book object from intent extras comment
         String bookTitle = getIntent().getStringExtra("Book Title");
 
@@ -42,6 +43,8 @@ public class BookDetailActivity extends AppCompatActivity {
 
         tvTitle.setText(book.getTitle());
         tvAuthor.setText(book.getAuthor());
+
+        setSupportActionBar(toolbar);
 
         Glide.with(context)
                 .load(book.getCoverUrl())
