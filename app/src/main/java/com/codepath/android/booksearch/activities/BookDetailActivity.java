@@ -23,7 +23,7 @@ public class BookDetailActivity extends AppCompatActivity {
         tvTitle = (TextView) findViewById(R.id.tvTitle);
         tvAuthor = (TextView) findViewById(R.id.tvAuthor);
 
-        // Extract book object from intent extras
+        // Extract book object from intent extras comment
 
         // Use book object to populate data into views
     }
